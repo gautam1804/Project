@@ -5,14 +5,14 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Service from "./pages/Sponsor";
 import Error from "./pages/Error";
-import Events from "./pages/Error";
-import Merchandise from "./pages/Error";
-import Background from './components/Background';
+import Events from "./pages/Event";
+import Merchandise from "./pages/Merchandise";
+import Team from "./pages/team";
 
 const App = () => {
   return (
     <>
-    {/* <Background /> */}
+
       <Switch>
         <Route exact path="/" component={Home}></Route>
         <Route path="/about" component={About}></Route>
@@ -20,6 +20,7 @@ const App = () => {
         <Route path="/sponsors" component={Service}></Route>
         <Route path="/events" component={Events}></Route>
         <Route path="/merchandise" component={Merchandise}></Route>
+        <Route path="/team" component={Team}></Route>
         <Route component={Error}></Route>
       </Switch>
     </>

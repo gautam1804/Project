@@ -1,0 +1,61 @@
+/* li:hover{
+    transform: translateY(-6px);
+    background: linear-gradient(grey,white);
+    border-radius: 20px;
+} */
+
+.indicator{
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #29fd53;
+    border-radius: 50%;
+    border:6px solid black;
+    transition: 0.5s;
+}
+
+.indicator::before{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width:20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 white;
+
+}
+.indicator::after{
+    content:"";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width:20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 white;
+
+}
+
+.navv:nth-child(1) ~ .indicator{
+    transform: translateX(calc(10px *0));
+}
+.navv:nth-child(2) ~ .indicator{
+    transform: translateX(calc(70px *1));
+}
+.navv:nth-child(3) ~ .indicator{
+    transform: translateX(calc(70px *2));
+}
+.navv:nth-child(4) ~ .indicator{
+    transform: translateX(calc(70px *3));
+}
+.navv:nth-child(5) ~ .indicator{
+    transform: translateX(calc(70px *4));
+}
+.navv:nth-child(6) ~ .indicator{
+    transform: translateX(calc(70px *5));
+}
+
